@@ -9,8 +9,21 @@ bot.on("text", ctx => {
   if(text == "/start"){
     ctx.reply(lang["eng"].startMessage)
   }else{
-    ctx.reply(lang["eng"].existsCommand)
+    sendKeyboardMessage(ctx, lang["eng"].existsCommand, ["Test", "Start"])
   }
 })
+
+function sendKeyboardMessage(ctx, text, buttons){
+  let lists = []
+  buttons.forEach(text -> {
+    lists.push([{text: text}])                              
+  })
+  lists.push([{text: "Submit"}])
+  ctx.reply(text, {
+    reply_markup: {
+      keyboard: lists
+    }
+  })
+}
 
 bot.launch()
