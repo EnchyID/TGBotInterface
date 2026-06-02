@@ -1,0 +1,6 @@
+{
+  "eng": {
+    "startMessage": "You're welcome!",
+    "existsCommand": "That command not exists!"
+  }
+}
