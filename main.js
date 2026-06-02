@@ -21,7 +21,8 @@ function sendKeyboardMessage(ctx, text, buttons){
   lists.push([{text: "Submit"}])
   ctx.reply(text, {
     reply_markup: {
-      keyboard: lists
+      keyboard: lists,
+      resize_keyboard: true
     }
   })
 }
