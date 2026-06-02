@@ -15,8 +15,8 @@ bot.on("text", ctx => {
 
 function sendKeyboardMessage(ctx, text, buttons){
   let lists = []
-  buttons.forEach(text -> {
-    lists.push([{text: text}])                              
+  buttons.forEach(title => {
+    lists.push([{text: title}])                              
   })
   lists.push([{text: "Submit"}])
   ctx.reply(text, {
